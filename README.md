@@ -1,6 +1,6 @@
 # VSCODE remote configs 
 
-This repository contains my configuration for vscode-remove containers. I clone this repo to 
+This repository contains my configuration for vscode-remote containers. I clone this repo to 
 `~/.config/vscode` and then i can create remote workspaces like this:
 ~~~
 {
