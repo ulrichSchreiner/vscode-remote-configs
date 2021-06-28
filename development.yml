@@ -1,0 +1,51 @@
+version: '3'
+
+x-services:
+  develop: &development
+    network_mode: "host"
+    hostname: ${HOSTNAME}
+    build: &build
+      context: .
+      args:
+        HOSTUSER: "usc"
+        HOSTGROUP: "usc"
+        HOSTUID: "1000"
+        HOSTGID: "1000"
+        LANG: "de_DE.UTF-8"
+        SHELL: "/usr/bin/zsh"
+        TZ: "Europe/Berlin"
+    volumes:
+      - "~/Nextcloud:/home/usc/Nextcloud"
+      - "~/go:/home/usc/go"
+      - "~/workspaces:/home/usc/workspaces"
+      - "~/.ssh:/home/usc/.ssh"
+      - "~/.gnupg:/home/usc/.gnupg"
+      - "~/.oh-my-zsh:/home/usc/.oh-my-zsh"
+      - "~/.zshrc:/home/usc/.zshrc"
+      - "~/.p10k.zsh:/home/usc/.p10k.zsh"
+      - "~/.:/home/usc/.myenv"        
+      - "~/tools:/home/usc/tools"
+      - "~/.config:/home/usc/.config"
+      - "~/.local:/home/usc/.local"
+      - "~/.kube:/home/usc/.kube"
+      - "/run/docker.sock:/run/docker.sock"
+      - "$SSH_AUTH_SOCK:$SSH_AUTH_SOCK"
+    environment:
+      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+
+services:
+  go-development:
+    <<: *development
+    build:
+      <<: *build
+      dockerfile: "Dockerfile.go"
+
+  rust-development:
+    <<: *development
+    build:
+      <<: *build
+      dockerfile: "Dockerfile.rust.stable"
