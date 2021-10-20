@@ -43,7 +43,11 @@ services:
     build:
       <<: *build
       dockerfile: "Dockerfile.go"
-
+  go2-development:
+    <<: *development
+    build:
+      <<: *build
+      dockerfile: "Dockerfile.go2"
   rust-development:
     <<: *development
     build:
