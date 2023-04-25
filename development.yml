@@ -48,3 +48,8 @@ services:
     build:
       <<: *build
       dockerfile: "Dockerfile.rust.stable"
+  zig-development:
+    <<: *development
+    build:
+      <<: *build
+      dockerfile: "Dockerfile.zig"
