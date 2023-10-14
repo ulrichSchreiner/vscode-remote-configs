@@ -29,9 +29,6 @@ x-services:
       - "~/.local:/home/usc/.local"
       - "~/.kube:/home/usc/.kube"
       - "/run/docker.sock:/run/docker.sock"
-      - "$SSH_AUTH_SOCK:/ssh_auth_sock"
-    environment:
-      - SSH_AUTH_SOCK=/ssh_auth_sock
     cap_add:
       - SYS_PTRACE
     security_opt:
