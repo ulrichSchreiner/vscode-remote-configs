@@ -28,6 +28,7 @@ x-services:
       - "~/.config:/home/usc/.config"
       - "~/.local:/home/usc/.local"
       - "~/.kube:/home/usc/.kube"
+      - "~/.cache:/home/usc/.cache"
       - "/run/docker.sock:/run/docker.sock"
     cap_add:
       - SYS_PTRACE
