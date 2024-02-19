@@ -29,6 +29,7 @@ x-services:
       - "~/.local:/home/usc/.local"
       - "~/.kube:/home/usc/.kube"
       - "~/.cache:/home/usc/.cache"
+      - "~/.vscode-server:/home/usc/.vscode-server"
       - "/run/docker.sock:/run/docker.sock"
     cap_add:
       - SYS_PTRACE
