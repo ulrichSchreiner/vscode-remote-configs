@@ -15,22 +15,7 @@ x-services:
         SHELL: "/usr/bin/zsh"
         TZ: "Europe/Berlin"
     volumes:
-      - "~/Nextcloud:/home/usc/Nextcloud"
-      - "~/go:/home/usc/go"
-      - "~/workspaces:/home/usc/workspaces"
-      - "~/.ssh:/home/usc/.ssh"
-      - "~/.gnupg:/home/usc/.gnupg"
-      - "~/.oh-my-zsh:/home/usc/.oh-my-zsh"
-      - "~/.zshrc:/home/usc/.zshrc"
-      - "~/.p10k.zsh:/home/usc/.p10k.zsh"
-      - "~/.:/home/usc/.myenv"        
-      - "~/tools:/home/usc/tools"
-      - "~/.config:/home/usc/.config"
-      - "~/.local:/home/usc/.local"
-      - "~/.kube:/home/usc/.kube"
-      - "~/.cache:/home/usc/.cache"
-      - "~/.vscode-server:/home/usc/.vscode-server"
-      - "/run/docker.sock:/run/docker.sock"
+      - "~:/home/usc"
     cap_add:
       - SYS_PTRACE
     security_opt:
