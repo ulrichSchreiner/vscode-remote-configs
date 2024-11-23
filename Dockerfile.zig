@@ -1,1 +1,1 @@
-FROM quay.io/ulrichschreiner/vscode-zig-remote
+FROM registry.gitlab.com/vscode-remote-images/zig:latest

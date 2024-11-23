@@ -1,1 +1,1 @@
-FROM quay.io/ulrichschreiner/vscode-go-remote
+FROM registry.gitlab.com/vscode-remote-images/go:latest 

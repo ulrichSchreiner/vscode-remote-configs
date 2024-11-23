@@ -1,1 +1,1 @@
-FROM quay.io/ulrichschreiner/vscode-rust-remote:latest
+FROM registry.gitlab.com/vscode-remote-images/rust:latest
