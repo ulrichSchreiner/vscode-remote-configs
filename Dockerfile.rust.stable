@@ -1,1 +1,1 @@
-FROM registry.gitlab.com/vscode-remote-images/rust:latest
+FROM registry.gitlab.com/ulrichschreiner/vscode-remote-images/rust:latest

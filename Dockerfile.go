@@ -1,1 +1,1 @@
-FROM registry.gitlab.com/vscode-remote-images/go:latest 
+FROM registry.gitlab.com/ulrichschreiner/vscode-remote-images/go:latest 
