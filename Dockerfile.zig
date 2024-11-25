@@ -1,1 +1,1 @@
-FROM registry.gitlab.com/vulrichschreiner/scode-remote-images/zig:latest
+FROM registry.gitlab.com/ulrichschreiner/vscode-remote-images/zig:latest
