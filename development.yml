@@ -16,7 +16,6 @@ x-services:
         TZ: "Europe/Berlin"
     volumes:
       - "~:/home/usc"
-      - "/run/media/usc/:/run/media/usc/"
     cap_add:
       - SYS_PTRACE
     security_opt:
